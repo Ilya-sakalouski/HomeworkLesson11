@@ -12,6 +12,9 @@ public class Task2 {
             if (!password.equals(confirmPassword))
                 throw new WrongPasswordExeption();
 
+        }catch (NullPointerException e){
+            System.out.println("This field cannot be empty !!!");
+            throw new RuntimeException(e);
         } catch (WrongLoginExeption e) {
             e.getMessage();
             throw new RuntimeException(e);
